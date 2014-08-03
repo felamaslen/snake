@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Snake game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+
+    <script data-main="js/_main" src="js/libs/require.js"></script>
+  </head>
+  <body>
+    <div id="viewControl" class="view">
+      <div class="inside">
+        <div class="form-group">
+          <label for="inputWidth" class="input-group col-xs-3">Resolution</label>
+          <div class="input-group col-xs-7">
+            <input type="number" step="1" min="5" max="100" value="10"
+              class="form-control" id="inputWidth" name="inputWidth">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="viewGame" class="view hidden"></div>
+  </body>
+</html>

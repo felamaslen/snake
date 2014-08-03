@@ -1,0 +1,13 @@
+/** @file: css/style.css */
+
+body {
+  margin: 0;
+}
+
+.view.hidden {
+  display: none;
+}
+
+#viewControl .inside {
+  padding: 1em;
+}
