@@ -29,6 +29,19 @@ define([
       return { x: x, y: y };
     }
 
+    var diffSpeeds = {
+      1: 1,
+      2: 3,
+      3: 6.5,
+      4: 7,
+      5: 8.5,
+      6: 10,
+      7: 11.5,
+      8: 13,
+      9: 14.5,
+      10: 16
+    };
+
     var Game = function() {
       this.state = null;
       this.$canvas = $("<canvas></canvas>").attr("id", "gameCanvas");
@@ -48,7 +61,8 @@ define([
       global.debug("Initialising game...", 2);
 
       this.param = $.extend(true, {
-        resolution: 10
+        resolution: 25,
+        difficulty: 6
       }, param);
 
       // initialise canvas
@@ -57,7 +71,7 @@ define([
       this.state = {
         snake: this.getStartSnake(),
         food: [],
-        speed: 5, // units per second
+        speed: diffSpeeds[this.param.difficulty], // units per second
         acceptKey: true,
 
         paused: false,
@@ -403,6 +417,12 @@ define([
     };
 
     var evGameKeydown = function(e) {
+      if (e.keyCode === keys.enter) {
+        global.debug("Starting game...", 3);
+        global.evStartGame();
+        return true;
+      }
+
       if (global.game.state === null || !global.game.state.acceptKey)
         return true;
 
@@ -445,10 +465,6 @@ define([
     }
     
     $(window).on("resize", evGameResize);
-
-    $(window).on("doc_ready_pre", function() {
-      $("#inputWidth").val(global.defaultResolution);
-    });
 
     $(window).on("keydown", evGameKeydown);
 
