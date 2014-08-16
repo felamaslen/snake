@@ -26,6 +26,7 @@ define([
           case 1: prefix = "WARN";  break;
           case 2: prefix = "NOTICE"; break;
           case 3: prefix = "DEBUG"; break;
+          case 4: prefix = "DEBUG"; break; // debug with trace
         }
 
         if (level === 0) {
@@ -33,7 +34,7 @@ define([
         }
 
         if (typeof window.console != "undefined") {
-          if (level >= 3) console.trace();
+          if (level >= 4) console.trace();
 
           args.unshift("[" + prefix + "]");
 
@@ -50,8 +51,16 @@ define([
       startPadding: 4,
       startSnakeLength: 5,
 
+      scoreBarHeight: 32,
+
       // animation parameters
-      animTime: 100 // ms
+      animTime: 20, // ms
+
+      // colours
+      color: {
+        snake: "#666",
+        food: "#fa0068"
+      }
     };
     
     return global;
