@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html>
   <head>
@@ -8,3 +9,49 @@
     <p>The snake game is currently under development, and unavailable as of now. Please check back soon.</p>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Snake game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+
+    <script data-main="js/_main" src="js/libs/require.js"></script>
+  </head>
+  <body>
+    <div id="viewControl" class="view">
+      <div class="inside">
+        <div class="form-group">
+          <label for="inputWidth" class="input-group col-xs-3">Resolution</label>
+          <div class="input-group col-xs-7">
+            <input type="number" step="1" min="5" max="100" value="10"
+              class="form-control" id="inputWidth" name="inputWidth">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <button type="button" class="btn btn-primary" id="btnStart">Start game!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="viewGame" class="view hidden">
+      <div id="scoreBar">
+        Score: <span id="score">0</span>
+      </div>
+    </div>
+    <div id="pausedOverlay">
+      <div class="overlaytext">
+        Paused
+      </div>
+    </div>
+  </body>
+</html>
+>>>>>>> dev
