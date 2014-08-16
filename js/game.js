@@ -255,7 +255,7 @@ define([
     };
 
     var evGameKeydown = function(e) {
-      if (global.game.state === null) return false;
+      if (global.game.state === null) return true;
 
       switch (e.keyCode) {
         case keys.left:
