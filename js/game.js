@@ -31,7 +31,7 @@ define([
 
     var Game = function() {
       this.state = null;
-      this.$canvas = $("<canvas></canvas>");
+      this.$canvas = $("<canvas></canvas>").attr("id", "gameCanvas");
       this.ctx = this.$canvas[0].getContext("2d");
       
       $("#viewGame").append(this.$canvas);

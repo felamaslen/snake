@@ -42,6 +42,14 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
 }
 
+#gameCanvas {
+  margin: 0 auto;
+  display: block;
+  box-shadow: inset 0 0 13px rgba(60, 60, 60, .6);
+  -moz-box-shadow: inset 0 0 13px rgba(60, 60, 60, .6);
+  -webkit-box-shadow: inset 0 0 13px rgba(60, 60, 60, .6);
+}
+
 #pausedOverlay {
   position: fixed;
   z-index: 1000;
