@@ -52,6 +52,9 @@ define([
       startSnakeLength: 5,
 
       scoreBarHeight: 32,
+      
+      minDifficulty: 1,
+      maxDifficulty: 10,
 
       // animation parameters
       animTime: 20, // ms
