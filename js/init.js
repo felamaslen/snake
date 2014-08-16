@@ -8,7 +8,6 @@ define([
     "jquerycookie",
 
     "global",
-    "config",
     "game"
   ],
   function(
@@ -16,19 +15,18 @@ define([
     jquerycookie,
     
     global,
-    config,
-    game
+    Game
   ) {
     global.game = new Game();
 
     $(document).ready(function(){
-      /*
-      global.game.init({
-        $container: $("#viewGame")
-      });
-      */
-    });
+      global.debug("triggering doc_ready_pre", 2);
+      $(window).trigger("doc_ready_pre");
+      
+      global.debug("triggering doc_ready_post", 2);
+      $(window).trigger("doc_ready_post");
 
-    return true;
+      return true;
+    });
   }
 );

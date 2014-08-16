@@ -5,12 +5,14 @@ require.config({
 
   paths: {
     jquery:       "libs/jquery.min",
-    jquerycookie: "libs/jquery.cookie",
+    jquerycookie: "libs/jquery.cookie.min",
     
     global: "global",
-    config: "config",
+
+    view:   "view",
 
     game:   "game",
+    ui:     "ui",
     init:   "init"
   },
 
@@ -23,14 +25,19 @@ require.config({
 require([
     "jquery",
     "global",
-    "game"
+    "view",
+    "game",
+    "ui",
+    "init"
   ],
   function(
     $,
     global,
-    game
+    view,
+    Game,
+    ui,
+    init
   ) {
-
     $(document).ready(function() {
       window.console && console.log("REQUIRE::Loaded");
     });
